@@ -1,6 +1,8 @@
 import tkinter as tk
 from hash import get_hash
 from refugee_sql_client import SqlClient
+import os
+from fingerprint_search import has_match
 
 class app:
 
@@ -15,6 +17,10 @@ class app:
                  text="fingerprint-hash").grid(row=2)
         tk.Label(master,
                  text="gender").grid(row=3)
+
+        fingerprints_files = os.listdir('database')
+
+        
 
         self.e1 = tk.Entry(master)
         self.e2 = tk.Entry(master)
@@ -42,5 +48,6 @@ class app:
 
     def show_entry_fields(self):
         self.sql_client.insert_into(self.e1.get(), self.e2.get(), get_hash(self.e3.get()), self.e4.get())
+
 
 
