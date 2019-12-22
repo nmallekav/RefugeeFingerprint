@@ -1,1 +1,1 @@
-
+Developed an application in Python to store data to PostgreSQL database using a user's unique fingerprint image. Used Git for version control as well as perceptual hashing API in order to convert the fingerprint image into an integer to use as a key for the Map data structure which stored information about a specific user.
